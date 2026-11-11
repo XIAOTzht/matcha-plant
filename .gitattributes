@@ -1,0 +1,9 @@
+*.sh text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.ps1 text eol=crlf
+
+# Frozen reproduction sources are verified byte-for-byte.
+maintenance/reproduction/approved_20261107/** -text
+

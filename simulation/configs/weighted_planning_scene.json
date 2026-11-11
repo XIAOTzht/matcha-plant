@@ -1,0 +1,404 @@
+{
+  "version": "watering-stepped-nozzle-2.0",
+  "source_root": "assets/plant",
+  "robot_xml": "assets/robot/robotstudio_so101/so101.xml",
+  "semantic_mesh": "semantic/semantic_mesh_mm.ply",
+  "semantic_labels": "semantic/labels.npz",
+  "weights": "weights/contact_weights.npz",
+  "organs": "organs/organ_instances.npz",
+  "coordinate_system": "metadata/coordinate_system.json",
+  "policy": "metadata/contact_policy.json",
+  "palette": "metadata/weight_palette_current.json",
+  "plant_layout": {
+    "board_center_xy_m": [
+      0.28,
+      0.2
+    ],
+    "yaw_deg": 0.0,
+    "ground_clearance_mm": 2.0,
+    "registration": "virtual_layout_not_measured_robot_registration"
+  },
+  "nozzle": {
+    "enabled": true,
+    "profile": "stepped_nozzle",
+    "mount_site": "gripperframe",
+    "direction_in_mount_frame": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "status": "adjustable_stepped_nozzle_rear_cross_axis_grip_rigid_attachment",
+    "body_position_in_gripper_m": [
+      -0.0032,
+      -0.0092,
+      -0.102
+    ],
+    "body_quaternion_in_gripper": [
+      0.7071067811865476,
+      0.7071067811865476,
+      0,
+      0
+    ],
+    "grasp_handle": true,
+    "gripper_rad": -0.08,
+    "rear_grip": {
+      "start_mm": 0,
+      "end_mm": 18,
+      "diameter_mm": 9.3,
+      "mass_g": 5,
+      "rgba": ".50 .54 .58 1"
+    },
+    "segments": [
+      {
+        "name": "nozzle_extension",
+        "start_mm": 18,
+        "end_mm": 90,
+        "diameter_mm": 8,
+        "mass_g": 8,
+        "rgba": ".65 .69 .73 1"
+      },
+      {
+        "name": "nozzle_adapter",
+        "start_mm": 90,
+        "end_mm": 96,
+        "diameter_mm": 10,
+        "mass_g": 2,
+        "rgba": ".70 .74 .78 1"
+      },
+      {
+        "name": "nozzle_lower_ring",
+        "start_mm": 96,
+        "end_mm": 106,
+        "diameter_mm": 14,
+        "mass_g": 4,
+        "rgba": ".72 .76 .80 1"
+      },
+      {
+        "name": "nozzle_seal",
+        "start_mm": 106,
+        "end_mm": 108,
+        "diameter_mm": 12,
+        "mass_g": 0.5,
+        "rgba": ".08 .09 .10 1"
+      },
+      {
+        "name": "nozzle_front_cap",
+        "start_mm": 108,
+        "end_mm": 119,
+        "diameter_mm": 15,
+        "mass_g": 5,
+        "rgba": ".76 .80 .84 1"
+      },
+      {
+        "name": "nozzle_outlet",
+        "start_mm": 119,
+        "end_mm": 120,
+        "diameter_mm": 11,
+        "mass_g": 0.5,
+        "rgba": ".72 .76 .80 1"
+      }
+    ],
+    "tip_end_mm": 120,
+    "grasp_contact": {
+      "enabled": true,
+      "pad_geoms": [
+        "fixed_jaw_sph_tip1",
+        "moving_jaw_sph_tip1"
+      ],
+      "handle_geoms": [
+        "nozzle_grasp_handle"
+      ],
+      "max_proxy_overlap_mm": 0.6,
+      "angle_tolerance_rad": 0.002,
+      "reason": "finger sphere proxies extend beyond actual visual surfaces; intended handle grip only"
+    },
+    "total_length_mm": 120,
+    "visual_sections": [
+      {
+        "name": "nozzle_rear_visual_mesh",
+        "rgba": ".56 .60 .64 1",
+        "profile_mm": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            4.4
+          ],
+          [
+            0.5,
+            4.6
+          ],
+          [
+            3,
+            4.6
+          ],
+          [
+            3.4,
+            4.45
+          ],
+          [
+            15.8,
+            4.45
+          ],
+          [
+            16.1,
+            4.6
+          ],
+          [
+            17.5,
+            4.6
+          ],
+          [
+            18,
+            4
+          ],
+          [
+            18,
+            0
+          ]
+        ]
+      },
+      {
+        "name": "nozzle_extension_visual_mesh",
+        "rgba": ".70 .74 .78 1",
+        "profile_mm": [
+          [
+            18,
+            0
+          ],
+          [
+            18,
+            3.9
+          ],
+          [
+            86.5,
+            3.9
+          ],
+          [
+            86.8,
+            3.6
+          ],
+          [
+            87.5,
+            3.6
+          ],
+          [
+            87.8,
+            3.9
+          ],
+          [
+            90,
+            3.9
+          ],
+          [
+            90,
+            4.9
+          ],
+          [
+            95.5,
+            4.9
+          ],
+          [
+            96,
+            5.7
+          ],
+          [
+            96,
+            0
+          ]
+        ]
+      },
+      {
+        "name": "nozzle_lower_ring_visual_mesh",
+        "rgba": ".73 .77 .81 1",
+        "profile_mm": [
+          [
+            96,
+            0
+          ],
+          [
+            96,
+            6.6
+          ],
+          [
+            96.7,
+            6.95,
+            0.15
+          ],
+          [
+            105.3,
+            6.95,
+            0.2
+          ],
+          [
+            106,
+            6.6
+          ],
+          [
+            106,
+            0
+          ]
+        ]
+      },
+      {
+        "name": "nozzle_seal_visual_mesh",
+        "rgba": ".06 .07 .085 1",
+        "profile_mm": [
+          [
+            106,
+            0
+          ],
+          [
+            106,
+            5.95
+          ],
+          [
+            108,
+            5.95
+          ],
+          [
+            108,
+            0
+          ]
+        ]
+      },
+      {
+        "name": "nozzle_cap_visual_mesh",
+        "rgba": ".80 .83 .86 1",
+        "profile_mm": [
+          [
+            108,
+            0
+          ],
+          [
+            108,
+            6.9
+          ],
+          [
+            108.6,
+            7.45,
+            0.18
+          ],
+          [
+            118.3,
+            7.45,
+            0.25
+          ],
+          [
+            119,
+            6.7
+          ],
+          [
+            119,
+            5.4
+          ],
+          [
+            120,
+            5.4
+          ],
+          [
+            120,
+            1.0
+          ],
+          [
+            119.7,
+            0.8
+          ],
+          [
+            118.5,
+            0.8
+          ],
+          [
+            118.5,
+            0
+          ]
+        ]
+      },
+      {
+        "name": "nozzle_orifice_recess_mesh",
+        "rgba": ".035 .045 .055 1",
+        "profile_mm": [
+          [
+            118.55,
+            0
+          ],
+          [
+            118.55,
+            0.78
+          ],
+          [
+            118.6,
+            0.78
+          ],
+          [
+            118.6,
+            0
+          ]
+        ]
+      }
+    ]
+  },
+  "workspace": {
+    "min_m": [
+      -0.2,
+      -0.3,
+      0.0
+    ],
+    "max_m": [
+      0.65,
+      0.5,
+      0.65
+    ],
+    "enforced": true
+  },
+  "target_candidates": {
+    "height_above_soil_mm": 10.0,
+    "position_tolerance_mm": 0.25,
+    "count": 5,
+    "separation_mm": 10.0,
+    "status": "geometric_candidates_reachability_and_clearance_not_checked"
+  },
+  "watering_target_override": {
+    "approach_height_range_mm": [
+      5.0,
+      15.0
+    ],
+    "default_height_mm": 10.0
+  },
+  "hard_collision_refinement": {
+    "enabled": true,
+    "cell_tolerance_mm": 0.1,
+    "max_cells": 16384,
+    "plant_surface_clearance_enabled": false,
+    "plant_margin_mm": 0.5
+  },
+  "visual_mesh": {
+    "default_max_faces": 12000,
+    "max_faces_by_class": {
+      "0": 1000,
+      "1": 8000,
+      "2": 16000,
+      "3": 30000,
+      "4": 12000,
+      "5": 4000,
+      "6": 35000
+    },
+    "soft_color_bins_per_class": 6,
+    "collision_enabled": false,
+    "note": "Simplification and nearest-source colors are display only. Planning must use full-resolution geometry and matching numeric weights."
+  },
+  "soft_contact_cell_mm": 1.0,
+  "planning": {
+    "start_q_arm_rad": [
+      0,
+      0,
+      0,
+      0,
+      1.5707963267948966
+    ],
+    "start_wrist_roll_deg": 90,
+    "note": "Initial wrist rolls 90 degrees; fingers grasp the rear 18 mm of the nozzle across its axis. All arm joints may move during planning."
+  }
+}

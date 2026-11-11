@@ -1,0 +1,24 @@
+{
+  "version": "plant-photo-to-path-1",
+  "scope": "plant_on_same_blue_upper_plate_and_cart",
+  "gpu_id": 1,
+  "plate_length_mm": 135.0,
+  "plate_width_mm": 110.0,
+  "tetra_downsample_ratio": 0.5,
+  "extra_semantic_views": 12,
+  "max_scale_disagreement": 0.05,
+  "cart_underside": {"enabled": true, "assumed_chassis_thickness_mm": 6.0},
+  "simulation_scene_template": "simulation/configs/weighted_attitude_search_scene.json",
+  "simulation_timing_config": "simulation/configs/weighted_trajectory_validation_v5.json",
+  "simulation_coordination_config": "simulation/configs/coordinated_motion.json",
+  "planner": {"pose_seeds": 40, "pose_refine_rounds": 160, "postures": 8, "corridors": 6, "iterations": 600, "seconds_per_goal": 240, "optimize_goals": 3, "refinement_seconds": 180},
+  "render": true,
+  "notes": [
+    "Blue upper plate and cart crop rules require this capture arrangement; new plant geometry and image count are not hardcoded.",
+    "Cart underside repair infers a flat bottom and four protected wheel envelopes; inspect synthetic geometry. Disable cart_underside.enabled for other carts.",
+    "Robot base layout and nozzle are virtual calibrated placeholders, not real robot registration.",
+    "Coordinated motion selects balanced use of five arm joints within explicit contact/time budgets; the gripper stays closed. It is not a claim of global minimum contact.",
+    "The user-selected default is coordinated motion. Natural and demonstration refinements remain optional and are disabled in this pipeline configuration.",
+    "No valid target/path or failed dynamics means a failed run, never a success marker."
+  ]
+}

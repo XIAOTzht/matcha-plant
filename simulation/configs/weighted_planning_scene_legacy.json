@@ -1,0 +1,119 @@
+{
+  "version": "watering-weighted-grasp-1.0-legacy",
+  "source_root": "assets/plant",
+  "robot_xml": "assets/robot/robotstudio_so101/so101.xml",
+  "semantic_mesh": "semantic/semantic_mesh_mm.ply",
+  "semantic_labels": "semantic/labels.npz",
+  "weights": "weights/contact_weights.npz",
+  "organs": "organs/organ_instances.npz",
+  "coordinate_system": "metadata/coordinate_system.json",
+  "policy": "metadata/contact_policy.json",
+  "palette": "metadata/weight_palette_current.json",
+  "plant_layout": {
+    "board_center_xy_m": [
+      0.28,
+      0.2
+    ],
+    "yaw_deg": 0.0,
+    "ground_clearance_mm": 2.0,
+    "registration": "virtual_layout_not_measured_robot_registration"
+  },
+  "nozzle": {
+    "enabled": true,
+    "diameter_mm": 8.0,
+    "length_mm": 60.0,
+    "mass_g": 15.0,
+    "mount_site": "gripperframe",
+    "direction_in_mount_frame": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "status": "rigid_grasp_placeholder_L_nozzle_handle_between_finger_pads",
+    "body_position_in_gripper_m": [
+      -0.003,
+      -0.0002,
+      -0.109
+    ],
+    "body_quaternion_in_gripper": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "grasp_handle": true,
+    "gripper_rad": -0.08,
+    "grasp_contact": {
+      "enabled": true,
+      "pad_geoms": [
+        "fixed_jaw_sph_tip1",
+        "moving_jaw_sph_tip1"
+      ],
+      "handle_geoms": [
+        "nozzle_grasp_handle"
+      ],
+      "max_proxy_overlap_mm": 0.6,
+      "angle_tolerance_rad": 0.002,
+      "reason": "finger sphere proxies extend beyond actual visual surfaces; intended handle grip only"
+    },
+    "handle_diameter_mm": 9.3,
+    "handle_fromto_m": [
+      -0.013,
+      0,
+      -0.0002,
+      -0.004,
+      0,
+      -0.0002
+    ]
+  },
+  "workspace": {
+    "min_m": [
+      -0.2,
+      -0.3,
+      0.0
+    ],
+    "max_m": [
+      0.65,
+      0.5,
+      0.65
+    ],
+    "enforced": true
+  },
+  "target_candidates": {
+    "height_above_soil_mm": 10.0,
+    "position_tolerance_mm": 0.25,
+    "count": 5,
+    "separation_mm": 10.0,
+    "status": "geometric_candidates_reachability_and_clearance_not_checked"
+  },
+  "watering_target_override": {
+    "approach_height_range_mm": [
+      5.0,
+      15.0
+    ],
+    "default_height_mm": 10.0
+  },
+  "hard_collision_refinement": {
+    "enabled": true,
+    "cell_tolerance_mm": 0.1,
+    "max_cells": 16384,
+    "plant_surface_clearance_enabled": false,
+    "plant_margin_mm": 0.5
+  },
+  "visual_mesh": {
+    "default_max_faces": 12000,
+    "max_faces_by_class": {
+      "0": 1000,
+      "1": 8000,
+      "2": 16000,
+      "3": 30000,
+      "4": 12000,
+      "5": 4000,
+      "6": 35000
+    },
+    "soft_color_bins_per_class": 6,
+    "collision_enabled": false,
+    "note": "Simplification and nearest-source colors are display only. Planning must use full-resolution geometry and matching numeric weights."
+  },
+  "soft_contact_cell_mm": 1.0
+}

@@ -1,0 +1,57 @@
+{
+  "version": "watering-scene-preview-0.3.0",
+  "source_root": "assets/plant",
+  "robot_xml": "assets/robot/robotstudio_so101/so101.xml",
+  "semantic_mesh": "semantic/semantic_mesh_mm.ply",
+  "semantic_labels": "semantic/labels.npz",
+  "weights": "weights/contact_weights.npz",
+  "organs": "organs/organ_instances.npz",
+  "coordinate_system": "metadata/coordinate_system.json",
+  "policy": "metadata/contact_policy.json",
+  "palette": "metadata/palette_contrast_validation.json",
+  "plant_layout": {
+    "board_center_xy_m": [0.28, 0.20],
+    "yaw_deg": 0.0,
+    "ground_clearance_mm": 2.0,
+    "registration": "virtual_layout_not_measured_robot_registration"
+  },
+  "nozzle": {
+    "enabled": true,
+    "diameter_mm": 8.0,
+    "length_mm": 60.0,
+    "mass_g": 15.0,
+    "mount_site": "gripperframe",
+    "direction_in_mount_frame": [0.0, 0.0, -1.0],
+    "status": "adjustable_placeholder_rigidly_attached_at_gripper_tip"
+  },
+  "workspace": {
+    "min_m": [-0.20, -0.30, 0.0],
+    "max_m": [0.65, 0.50, 0.65],
+    "enforced": false
+  },
+  "target_candidates": {
+    "height_above_soil_mm": 10.0,
+    "position_tolerance_mm": 0.25,
+    "count": 5,
+    "separation_mm": 10.0,
+    "status": "geometric_candidates_reachability_and_clearance_not_checked"
+  },
+  "watering_target_override": {
+    "approach_height_range_mm": [5.0, 15.0],
+    "default_height_mm": 10.0
+  },
+  "hard_collision_refinement": {
+    "enabled": true,
+    "cell_tolerance_mm": 0.1,
+    "max_cells": 16384,
+    "plant_surface_clearance_enabled": true,
+    "plant_margin_mm": 0.5
+  },
+  "visual_mesh": {
+    "default_max_faces": 12000,
+    "max_faces_by_class": {"0": 1000, "1": 8000, "2": 16000, "3": 30000, "4": 12000, "5": 4000, "6": 35000},
+    "soft_color_bins_per_class": 6,
+    "collision_enabled": false,
+    "note": "Simplification and nearest-source colors are display only. Planning must use full-resolution geometry and matching numeric weights."
+  }
+}

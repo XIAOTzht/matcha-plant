@@ -1,0 +1,8 @@
+# Separate CPU planner/rendering environment; keep existing CUDA reconstruction env.
+mujoco==3.16.0
+numpy>=2.0,<3
+scipy>=1.13,<2
+plyfile==1.1.5
+fast-simplification==0.2.0
+libigl>=2.6,<3
+Pillow>=10,<13

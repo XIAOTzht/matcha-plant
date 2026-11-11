@@ -1,0 +1,335 @@
+{
+  "pruned_directory_names": [
+    ".aws",
+    ".cache",
+    ".git",
+    ".gradio",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".ssh",
+    ".venv",
+    "CMakeFiles",
+    "__pycache__",
+    "backups",
+    "build",
+    "cache",
+    "checkpoints",
+    "data",
+    "dist",
+    "envs",
+    "exports",
+    "incoming",
+    "logs",
+    "node_modules",
+    "outputs",
+    "packages",
+    "pretrained",
+    "t",
+    "tmp",
+    "venv",
+    "weights"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "reason": "replaced_export_ignore"
+    },
+    {
+      "path": "MAtCha/.gitignore",
+      "reason": "replaced_export_ignore"
+    },
+    {
+      "path": "MAtCha/2d-gaussian-splatting/.gitignore",
+      "reason": "replaced_export_ignore"
+    },
+    {
+      "path": "MAtCha/2d-gaussian-splatting/scene/gaussian_model.py.before_mip_patch",
+      "reason": "binary_archive_or_non_source"
+    },
+    {
+      "path": "MAtCha/2d-gaussian-splatting/scene/gaussian_model.py.mip_backup",
+      "reason": "binary_archive_or_non_source"
+    },
+    {
+      "path": "MAtCha/2d-gaussian-splatting/submodules/diff-surfel-rasterization/.gitignore",
+      "reason": "replaced_export_ignore"
+    },
+    {
+      "path": "MAtCha/2d-gaussian-splatting/submodules/diff-surfel-rasterization/diff_surfel_rasterization/_C.cpython-39-x86_64-linux-gnu.so",
+      "reason": "binary_archive_or_non_source"
+    },
+    {
+      "path": "MAtCha/2d-gaussian-splatting/submodules/diff-surfel-rasterization/third_party/glm/.gitignore",
+      "reason": "replaced_export_ignore"
+    },
+    {
+      "path": "MAtCha/2d-gaussian-splatting/submodules/diff-surfel-rasterization/third_party/glm/doc/man.doxy",
+      "reason": "binary_archive_or_non_source"
+    },
+    {
+      "path": "MAtCha/2d-gaussian-splatting/submodules/diff-surfel-rasterization/third_party/glm/doc/manual.pdf",
+      "reason": "binary_archive_or_non_source"
+    },
+    {
+      "path": "MAtCha/2d-gaussian-splatting/submodules/diff-surfel-rasterization/third_party/glm/test/glm.cppcheck",
+      "reason": "binary_archive_or_non_source"
+    },
+    {
+      "path": "MAtCha/2d-gaussian-splatting/submodules/diff-surfel-rasterization/third_party/glm/util/autoexp.vc2010.dat",
+      "reason": "binary_archive_or_non_source"
+    },
+    {
+      "path": "MAtCha/2d-gaussian-splatting/submodules/diff-surfel-rasterization/third_party/glm/util/glm.natvis",
+      "reason": "binary_archive_or_non_source"
+    },
+    {
+      "path": "MAtCha/2d-gaussian-splatting/submodules/diff-surfel-rasterization/third_party/glm/util/usertype.dat",
+      "reason": "binary_archive_or_non_source"
+    },
+    {
+      "path": "MAtCha/2d-gaussian-splatting/submodules/simple-knn/simple_knn/_C.cpython-39-x86_64-linux-gnu.so",
+      "reason": "binary_archive_or_non_source"
+    },
+    {
+      "path": "MAtCha/2d-gaussian-splatting/submodules/tetra-triangulation/.gitignore",
+      "reason": "replaced_export_ignore"
+    },
+    {
+      "path": "MAtCha/2d-gaussian-splatting/submodules/tetra-triangulation/Makefile",
+      "reason": "generated_cmake_makefile"
+    },
+    {
+      "path": "MAtCha/2d-gaussian-splatting/submodules/tetra-triangulation/cmake_install.cmake",
+      "reason": "runtime_or_result_pointer"
+    },
+    {
+      "path": "MAtCha/2d-gaussian-splatting/submodules/tetra-triangulation/tetranerf/utils/extension/tetranerf_cpp_extension.cpython-311-x86_64-linux-gnu.so.disabled",
+      "reason": "binary_archive_or_non_source"
+    },
+    {
+      "path": "MAtCha/2d-gaussian-splatting/submodules/tetra-triangulation/tetranerf/utils/extension/tetranerf_cpp_extension.cpython-39-x86_64-linux-gnu.so",
+      "reason": "binary_archive_or_non_source"
+    },
+    {
+      "path": "MAtCha/mast3r/.gitignore",
+      "reason": "replaced_export_ignore"
+    },
+    {
+      "path": "MAtCha/mast3r/CHECKPOINTS_NOTICE",
+      "reason": "binary_archive_or_non_source"
+    },
+    {
+      "path": "MAtCha/mast3r/asmk/.gitignore",
+      "reason": "replaced_export_ignore"
+    },
+    {
+      "path": "MAtCha/mast3r/dust3r/.gitignore",
+      "reason": "replaced_export_ignore"
+    },
+    {
+      "path": "MAtCha/mast3r/dust3r/croco/croco-stereo-flow-demo.ipynb",
+      "reason": "binary_archive_or_non_source"
+    },
+    {
+      "path": "MAtCha/mast3r/dust3r/croco/interactive_demo.ipynb",
+      "reason": "binary_archive_or_non_source"
+    },
+    {
+      "path": "MAtCha/mast3r/dust3r/croco/models/curope/curope.cpython-39-x86_64-linux-gnu.so",
+      "reason": "binary_archive_or_non_source"
+    },
+    {
+      "path": "MAtCha/mast3r/dust3r/croco/models/curope/setup.py.bak",
+      "reason": "backup_file"
+    },
+    {
+      "path": "MAtCha/mast3r/mast3r/cloud_opt/sparse_ga.py.backup_20261014_222351",
+      "reason": "backup_file"
+    },
+    {
+      "path": "MAtCha/media/gifs/garden.gif",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "MAtCha/media/imgs/buzz1_gt_rgb.jpg",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "MAtCha/media/imgs/buzz1_matcha_mesh.png",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "MAtCha/media/imgs/re_gt_rgb.jpg",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "MAtCha/media/imgs/re_matcha_mesh.png",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "MAtCha/media/imgs/workbench/buzz_dense_color.JPG",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "MAtCha/media/imgs/workbench/buzz_dense_mesh.JPG",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "MAtCha/media/imgs/workbench/garden_dense_color.JPG",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "MAtCha/media/imgs/workbench/garden_dense_mesh.JPG",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "MAtCha/media/imgs/workbench/gundam_dense_color.JPG",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "MAtCha/media/imgs/workbench/gundam_dense_mesh.JPG",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "MAtCha/media/imgs/workbench/re_dense_color.JPG",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "MAtCha/media/imgs/workbench/re_dense_mesh.JPG",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "MAtCha/scripts/extract_tetra_mesh.py.backup_20261014_222351",
+      "reason": "backup_file"
+    },
+    {
+      "path": "MAtCha/scripts/refine_free_gaussians.py.backup_20261014_222351",
+      "reason": "backup_file"
+    },
+    {
+      "path": "MAtCha/scripts/run_sfm.py.backup_20261014_222351",
+      "reason": "backup_file"
+    },
+    {
+      "path": "configs/server_render_runtime.json",
+      "reason": "runtime_or_result_pointer"
+    },
+    {
+      "path": "docs/SERVER_RESULT_INDEX.json",
+      "reason": "runtime_or_result_pointer"
+    },
+    {
+      "path": "maintenance/plant_contact_installed.json",
+      "reason": "runtime_or_result_pointer"
+    },
+    {
+      "path": "simulation/configs/latest_path.json",
+      "reason": "runtime_or_result_pointer"
+    },
+    {
+      "path": "simulation/configs/latest_replay.json",
+      "reason": "runtime_or_result_pointer"
+    },
+    {
+      "path": "simulation/configs/latest_scene.json",
+      "reason": "runtime_or_result_pointer"
+    },
+    {
+      "path": "simulation/configs/latest_screening.json",
+      "reason": "runtime_or_result_pointer"
+    },
+    {
+      "path": "tools/plant_extract/prepare_turntable30.py.before_layout_fix",
+      "reason": "binary_archive_or_non_source"
+    },
+    {
+      "path": "tools/plant_semantics/.gitignore",
+      "reason": "replaced_export_ignore"
+    },
+    {
+      "path": "tools/plant_semantics/plant_semantics_source.zip",
+      "reason": "binary_archive_or_non_source"
+    },
+    {
+      "path": "tools/plant_semantics/plant_semantics_source.zip.sha256",
+      "reason": "binary_archive_or_non_source"
+    },
+    {
+      "path": "tools/plant_semantics/plant_semantics_v3_source.zip",
+      "reason": "binary_archive_or_non_source"
+    },
+    {
+      "path": "tools/plant_semantics/plant_semantics_v3_source.zip.sha256",
+      "reason": "binary_archive_or_non_source"
+    },
+    {
+      "path": "tools/plant_semantics/models/downloads.json",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "tools/plant_semantics/models/mobile_sam_parallel.pt",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "tools/plant_semantics/models/weight_hashes.json",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "tools/plant_semantics/models/clipseg-rd64-refined/config.json",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "tools/plant_semantics/models/clipseg-rd64-refined/downloads.json",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "tools/plant_semantics/models/clipseg-rd64-refined/merges.txt",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "tools/plant_semantics/models/clipseg-rd64-refined/model.safetensors",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "tools/plant_semantics/models/clipseg-rd64-refined/preprocessor_config.json",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "tools/plant_semantics/models/clipseg-rd64-refined/special_tokens_map.json",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "tools/plant_semantics/models/clipseg-rd64-refined/tokenizer_config.json",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "tools/plant_semantics/models/clipseg-rd64-refined/vocab.json",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "tools/plant_semantics/models/grounding-dino-tiny/config.json",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "tools/plant_semantics/models/grounding-dino-tiny/model.safetensors",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "tools/plant_semantics/models/grounding-dino-tiny/preprocessor_config.json",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "tools/plant_semantics/models/grounding-dino-tiny/special_tokens_map.json",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "tools/plant_semantics/models/grounding-dino-tiny/tokenizer.json",
+      "reason": "downloaded_models_or_upstream_showcase"
+    },
+    {
+      "path": "tools/plant_semantics/models/grounding-dino-tiny/tokenizer_config.json",
+      "reason": "downloaded_models_or_upstream_showcase"
+    }
+  ]
+}

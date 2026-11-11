@@ -1,0 +1,33 @@
+{
+  "version": "contact-policy-0.3.0",
+  "units": "millimeter",
+  "description": "Initial contact-risk policy for SO-101 watering. Values are planning costs, not measured forces.",
+  "air": {"class_id": null, "weight": 0.0, "hard_collision": false},
+  "classes": {
+    "0": {"name": "unknown", "weight": 20.0, "hard_collision": false, "watering_target": false, "uncertainty_multiplier": 1.2},
+    "1": {"name": "stem", "weight": 20.0, "hard_collision": false, "watering_target": false, "uncertainty_multiplier": 1.2},
+    "2": {"name": "leaf", "weight": 1.0, "hard_collision": false, "watering_target": false, "uncertainty_multiplier": 1.2},
+    "3": {"name": "flower", "weight": 5.0, "hard_collision": false, "watering_target": false, "uncertainty_multiplier": 1.2},
+    "4": {"name": "pot", "weight": null, "hard_collision": true, "watering_target": false, "uncertainty_multiplier": 1.0},
+    "5": {"name": "substrate", "weight": null, "hard_collision": true, "watering_target": true, "uncertainty_multiplier": 1.0},
+    "6": {"name": "cart", "weight": null, "hard_collision": true, "watering_target": false, "uncertainty_multiplier": 1.0}
+  },
+  "uncertainty": {"default_multiplier": 1.2, "rule": "effective_weight = base_weight * uncertainty_multiplier for soft classes"},
+  "distance_risk": {
+    "model": "normalized_convex_power",
+    "clearance_start_mm": 5.0,
+    "penetration_scale_mm": 2.0,
+    "power": 2.0,
+    "reference_values": {"5mm": 0.0, "4mm": 0.04, "3mm": 0.16, "2mm": 0.36, "1mm": 0.64, "0mm": 1.0},
+    "rule": "risk=clip((5-clearance_mm)/5,0,1)^2; clearance <= 0 is clamped to 1"
+  },
+  "continuous_contact": {
+    "integration": "trapezoidal integral of instantaneous risk over time",
+    "episode_gap_s": 0.15,
+    "persistence_alpha": 0.5,
+    "persistence_tau_s": 1.0,
+    "persistence_cap": 3.0
+  },
+  "hard_collision": {"classes": [4, 5, 6]},
+  "watering_target": {"class_id": 5, "approach_height_range_mm": [5.0, 15.0], "default_height_mm": 10.0}
+}

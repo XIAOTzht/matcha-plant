@@ -1,0 +1,29 @@
+{
+  "version": "watering-weighted-attitude-timing-5.0",
+  "timing_profile": "continuous_septic",
+  "waypoint_velocity_mode": "monotone_harmonic",
+  "legacy_duration_padding": false,
+  "limits_status": "adjustable_simulation_limits_not_measured_SO101_hardware_limits",
+  "velocity_limit_rad_s": [0.45, 0.45, 0.45, 0.5, 0.6],
+  "acceleration_limit_rad_s2": [0.8, 0.8, 0.8, 1.0, 1.2],
+  "duration_safety_factor": 1.65,
+  "waypoint_velocity_tension": 0.75,
+  "waypoint_velocity_cap": 0.65,
+  "position_lead_s": 0.0035,
+  "minimum_segment_s": 0.5,
+  "initial_hold_s": 0.5,
+  "target_hold_s": 1.0,
+  "hard_margin_mm": 0.5,
+  "goal_position_tolerance_mm": 0.25,
+  "down_axis_tolerance_deg": 20.0,
+  "joint_tracking_tolerance_deg": 1.0,
+  "gripper_rad": -0.08,
+  "bias_feedforward": true,
+  "notes": [
+    "C3 continuous seventh-order Hermite timing; internal knots share velocity, with zero acceleration and jerk.",
+    "Weighted harmonic knot velocity suppresses overshoot at reversals of each joint while other joints continue moving.",
+    "Polynomial derivative roots determine segment velocity and acceleration extrema; duration grows only when a limit requires it.",
+    "3.5 ms position lead supports simulation actuator tracking. It changes the control command; actual geometry is independently rechecked.",
+    "Plant weights, hard margin, target and waypoints are unchanged. This remains a simulation profile."
+  ]
+}

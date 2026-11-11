@@ -1,0 +1,25 @@
+{
+  "version": "watering-weighted-attitude-timing-2.0",
+  "limits_status": "adjustable_simulation_limits_not_measured_SO101_hardware_limits",
+  "velocity_limit_rad_s": [0.45, 0.45, 0.45, 0.5, 0.6],
+  "acceleration_limit_rad_s2": [0.8, 0.8, 0.8, 1.0, 1.2],
+  "duration_safety_factor": 1.50,
+  "minimum_segment_s": 0.5,
+  "initial_hold_s": 0.5,
+  "target_hold_s": 1.0,
+  "hard_margin_mm": 0.5,
+  "goal_position_tolerance_mm": 0.25,
+  "down_axis_tolerance_deg": 20.0,
+  "joint_tracking_tolerance_deg": 1.0,
+  "gripper_rad": -0.08,
+  "bias_feedforward": true,
+  "notes": [
+    "Each segment is a quintic rest-to-rest curve: s(u)=10u^3-15u^4+6u^5.",
+    "Duration safety factor raised from 1.25 to 1.50 to reduce simulated acceleration; acceleration limits are unchanged.",
+    "Dynamics use the original MuJoCo position actuators plus qfrc_bias/kp control bias compensation.",
+    "Plant display meshes are not physics colliders. Full source triangles are checked externally on every reference and simulated state.",
+    "Hard checks use the configured conservative robot covers and adaptive native volume bounds. Soft scores include original robot visual meshes when enabled in the saved scene.",
+    "Soft scores measure geometric exposure, not measured force or plant damage. Slower timing also changes contact duration and must be rescored.",
+    "The final hold is a one-second preview pause, not an actual watering flow command."
+  ]
+}

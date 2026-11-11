@@ -1,0 +1,15 @@
+# Install torch/torchvision for the target machine separately (CPU or matching CUDA build).
+numpy>=1.26
+scipy>=1.11
+Pillow>=10
+open3d>=0.19
+transformers==4.57.1
+huggingface-hub==0.36.0
+tokenizers==0.22.1
+timm==0.9.16
+plyfile>=1.1
+requests
+safetensors
+mpmath
+opencv-python-headless
+scikit-learn

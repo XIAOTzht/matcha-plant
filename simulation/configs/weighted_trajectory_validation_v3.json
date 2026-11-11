@@ -1,0 +1,29 @@
+{
+  "version": "watering-weighted-attitude-timing-3.0",
+  "timing_profile": "continuous_quintic",
+  "limits_status": "adjustable_simulation_limits_not_measured_SO101_hardware_limits",
+  "velocity_limit_rad_s": [0.45, 0.45, 0.45, 0.5, 0.6],
+  "acceleration_limit_rad_s2": [0.8, 0.8, 0.8, 1.0, 1.2],
+  "duration_safety_factor": 1.5,
+  "waypoint_velocity_tension": 0.4,
+  "waypoint_velocity_cap": 0.65,
+  "minimum_segment_s": 0.5,
+  "initial_hold_s": 0.5,
+  "target_hold_s": 1.0,
+  "hard_margin_mm": 0.5,
+  "goal_position_tolerance_mm": 0.25,
+  "down_axis_tolerance_deg": 20.0,
+  "joint_tracking_tolerance_deg": 1.0,
+  "gripper_rad": -0.08,
+  "bias_feedforward": true,
+  "notes": [
+    "Internal waypoints use shared non-zero quintic-Hermite velocities; the route does not stop at every waypoint.",
+    "The first and last waypoint remain rest-to-rest and internal acceleration is zero at shared knots.",
+    "waypoint_velocity_tension controls how strongly the centered joint-space velocity is retained.",
+    "Duration is enlarged after sampled analytic extrema checks so velocity and acceleration limits remain satisfied.",
+    "Dynamics use the original MuJoCo position actuators plus qfrc_bias/kp control bias compensation.",
+    "Plant display meshes are not physics colliders. Full source triangles are checked externally on every reference and simulated state.",
+    "Soft scores measure geometric exposure, not measured force or plant damage. Slower timing also changes contact duration and is rescored.",
+    "The final hold is a one-second preview pause, not an actual watering flow command."
+  ]
+}

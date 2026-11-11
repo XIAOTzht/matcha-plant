@@ -1,0 +1,17 @@
+{
+  "version": "organ-contact-policy-0.3.0",
+  "description": "Geometry-based planning preference; center penalties are stronger for flower and large-leaf interiors. Values are not measured stiffness.",
+  "leaf_class_id": 2,
+  "flower_class_id": 3,
+  "center_gain": 1.0,
+  "leaf_center_gain": 2.0,
+  "flower_center_gain": 1.5,
+  "center_power": 1.0,
+  "uncertainty_scope": "organ_area_fraction",
+  "uncertainty_rule": "For each resolved leaf/flower, apply one multiplier 1 + (class uncertainty multiplier - 1) * uncertain surface area fraction to the whole organ; retain original point uncertainty flags.",
+  "leaf_size_gain": 2.0,
+  "leaf_reference_surface_area_mm2": 2500.0,
+  "leaf_size_rule": "1 + leaf_size_gain * area / (area + reference_area)",
+  "center_rule": "leaf: 1 + leaf_center_gain * center_score ** center_power; flower: 1 + flower_center_gain * center_score ** center_power",
+  "unresolved_fragment_rule": "use maximum center and size multiplier, never treat an unresolved patch as free space"
+}

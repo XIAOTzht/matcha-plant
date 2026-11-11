@@ -1,0 +1,24 @@
+{
+  "version": "coordinated-postures-1.0",
+  "selection_mode": "coordinated",
+  "relative_exposure_allowance": 0.15,
+  "absolute_exposure_allowance": 0.0,
+  "max_duration_ratio": 1.65,
+  "max_joint_travel_ratio": 2.4,
+  "desired_joint_span_deg": [20, 30, 30, 35, 45],
+  "excursion_scale_deg": [14, 28, 32, 35, 48],
+  "rounds": 3,
+  "proposals_per_round": 24,
+  "finalists": 5,
+  "search_seconds": 240,
+  "coarse_dt_s": 0.10,
+  "final_dt_s": 0.04,
+  "seed": 20261107,
+  "notes": [
+    "All five arm joints may coordinate; the gripper remains fixed to hold the nozzle.",
+    "Coordinated mode prefers visible balanced joint participation among candidates within 15% of the lowest evaluated contact/persistence score and the duration/travel limits, and never above the unchanged baseline exposure.",
+    "Spans saturate at the stated targets. Loops, reversals and extra travel do not earn unlimited reward.",
+    "Efficient mode selects the original persistence + 0.05 * duration objective. Coordinated mode is a presentation preference, not proof of greater optimality.",
+    "Hard constraints, endpoint, plant weights and timing limits stay authoritative. Finite sampled validation is required before replay."
+  ]
+}

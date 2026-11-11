@@ -1,0 +1,27 @@
+{
+  "scope": "Static source snapshot checks; not a new full photo pipeline run",
+  "archive_sha256": "89d1a3c9457c65b918d94d83ee85666d70372b6ac64747bc120825290ff4f802",
+  "server_manifest_verified_files": 2223,
+  "python_syntax_files": 500,
+  "json_parse_files": 28,
+  "xml_parse_files": 3,
+  "robot_mesh_references": {
+    "checked": 18,
+    "missing": 0
+  },
+  "frozen_source_files": {
+    "checked": 50,
+    "mismatches": 0
+  },
+  "unit_tests": {
+    "pipeline": 11,
+    "weights": 6,
+    "trajectory_and_planner": 14,
+    "coordination": 7,
+    "total_passed": 38
+  },
+  "test_environment": "Existing Windows MuJoCo environment; pipeline transport tests also checked using bundled Python",
+  "excluded_assets": "Input photos, pretrained checkpoints, generated plant meshes, saved inference evidence and approved path capsule are separate assets",
+  "fresh_linux_install_tested": false,
+  "github_push_performed": false
+}

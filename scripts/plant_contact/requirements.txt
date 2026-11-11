@@ -1,0 +1,5 @@
+# Reuse envs/plant_semantics. Only install these if check_environment.py reports a missing package.
+numpy>=1.24
+scipy>=1.11
+Pillow>=10
+plyfile>=1.0

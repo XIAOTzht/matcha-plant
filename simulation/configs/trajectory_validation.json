@@ -1,0 +1,23 @@
+{
+  "version": "watering-timed-replay-0.2.0",
+  "limits_status": "adjustable_simulation_limits_not_measured_SO101_hardware_limits",
+  "velocity_limit_rad_s": [0.45, 0.45, 0.45, 0.50, 0.60],
+  "acceleration_limit_rad_s2": [0.80, 0.80, 0.80, 1.00, 1.20],
+  "duration_safety_factor": 1.25,
+  "minimum_segment_s": 0.50,
+  "initial_hold_s": 0.50,
+  "target_hold_s": 1.00,
+  "hard_margin_mm": 0.50,
+  "goal_position_tolerance_mm": 0.25,
+  "down_axis_tolerance_deg": 20.0,
+  "joint_tracking_tolerance_deg": 1.0,
+  "gripper_rad": 0.35,
+  "bias_feedforward": true,
+  "notes": [
+    "Each segment is a quintic rest-to-rest curve: s(u)=10u^3-15u^4+6u^5.",
+    "Dynamics use the original MuJoCo position actuators plus qfrc_bias/kp control bias compensation.",
+    "Plant meshes remain display-only. Full triangle geometry is checked externally on every reference and simulated state.",
+    "Hard checks use conservative robot bounding spheres. Soft scores are conservative geometric exposure, not measured force or plant damage.",
+    "The final hold is a one-second preview pause, not an actual watering flow command."
+  ]
+}

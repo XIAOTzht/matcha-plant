@@ -1,0 +1,56 @@
+{
+  "base_manifest": "SOURCE_EXPORT_MANIFEST.json",
+  "note": "Server algorithm code unchanged; publication documentation and source transfer helper updated",
+  "files": [
+    {
+      "path": ".gitignore",
+      "status": "added",
+      "sha256": "f8d48426f1123095cbfcd679f38eb1097d0e742f2a918e4a265eb5956c69bd00"
+    },
+    {
+      "path": "docs/GITHUB_SOURCE_REVIEW.md",
+      "status": "added",
+      "sha256": "67ea7cad8052887671414713d163243110b0559399270184f7e73abfdfff9a1d"
+    },
+    {
+      "path": "docs/SOURCE_REVIEW_20261111.json",
+      "status": "added",
+      "sha256": "26b5fdd725ad1ff9099b469a2d4227cc1fe2a4fd18e8388ed18928ab94dc4344"
+    },
+    {
+      "path": "maintenance/prepare_github_review.ps1",
+      "status": "added",
+      "sha256": "aade2d9e28141e4d2d1ccbccba7b09e32a52081fbee01bc4876b33c6f8cb0df1"
+    },
+    {
+      "path": "maintenance/test_export_github_source.py",
+      "status": "added",
+      "sha256": "8eb7abbb9e40627fb82cea92370e3be52dc01766434cf8d09833b9ad756aee47"
+    },
+    {
+      "path": "README.md",
+      "status": "added",
+      "sha256": "546aa9b126abd78faa76af95f75e3f458c473f861cf2e12e150ed02dd1f25934"
+    },
+    {
+      "path": "SOURCE_EXPORT_EXCLUSIONS.json",
+      "status": "added",
+      "sha256": "f35352a2a29eb58f596eb576b647eeefe6e068f050a841aed7c24f93d8da6ed9"
+    },
+    {
+      "path": "SOURCE_EXPORT_MANIFEST.json",
+      "status": "added",
+      "sha256": "a0fb584d1da5e8ddbde589bd8284c949af90feb5c2107001a3993210c09828b6"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "status": "added",
+      "sha256": "6a7a801144f337c7638ca03c97b578c4339c9ebfb2f9c2a3d82aebbcac3d59fc"
+    },
+    {
+      "path": ".gitattributes",
+      "status": "updated",
+      "sha256": "578e49b42c0b627829ee842b21a274df1a5190fbc758f8527dada7602689498a"
+    }
+  ]
+}
